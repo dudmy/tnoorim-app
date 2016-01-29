@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/abc_button_padding_horizontal_material">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="8dp"
+        android:background="#ffffff">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffdddd"
+            android:padding="@dimen/abc_button_padding_horizontal_material"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/coupon_cafe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카페명"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/coupon_img1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/coupon_no" />
+            <ImageView
+                android:id="@+id/coupon_img2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/coupon_no"
+                android:layout_marginLeft="10dp" />
+            <ImageView
+                android:id="@+id/coupon_img3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/coupon_no"
+                android:layout_marginLeft="10dp" />
+            <ImageView
+                android:id="@+id/coupon_img4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/coupon_no"
+                android:layout_marginLeft="10dp" />
+            <ImageView
+                android:id="@+id/coupon_img5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/coupon_no"
+                android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/coupon_img6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/coupon_no" />
+        <ImageView
+            android:id="@+id/coupon_img7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/coupon_no"
+            android:layout_marginLeft="10dp" />
+        <ImageView
+            android:id="@+id/coupon_img8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/coupon_no"
+            android:layout_marginLeft="10dp" />
+        <ImageView
+            android:id="@+id/coupon_img9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/coupon_no"
+            android:layout_marginLeft="10dp" />
+        <ImageView
+            android:id="@+id/coupon_img10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/coupon_no"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

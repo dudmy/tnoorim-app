@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ddffffff"
+    android:padding="@dimen/abc_button_padding_horizontal_material">
+
+    <ListView
+        android:id="@+id/lv_navi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:cacheColorHint="#00000000">
+    </ListView>
+
+</LinearLayout>

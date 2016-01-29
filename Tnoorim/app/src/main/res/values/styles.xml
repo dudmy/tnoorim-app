@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+
+        <item name="colorPrimary">#a92020</item>
+        <item name="colorPrimaryDark">#a92020</item>
+        <item name="colorAccent">#a92020</item>
+        <item name="colorControlHighlight">#a92020</item>
+        <item name="colorControlNormal">#a92020</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/actionbar</item>
+    </style>
+
+    <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight & colorSwitchThumbNormal. -->
+    <style name="StyleButton" parent="Material.Drawable.Ripple.Touch.Light">
+        <item name="android:background">#a92020</item>
+        <item name="rd_rippleColor">#33000000</item>
+        <item name="rd_leftPadding">1dp</item>
+        <item name="rd_topPadding">1dp</item>
+        <item name="rd_rightPadding">1dp</item>
+        <item name="rd_bottomPadding">2dp</item>
+    </style>
+
+    <style name="MenuItemRippleStyle" parent="Material.Drawable.Ripple.Wave">
+        <item name="rd_rippleColor">#902DA0FF</item>
+        <item name="rd_rippleAnimDuration">300</item>
+        <item name="rd_maskType">rectangle</item>
+        <item name="rd_cornerRadius">0dp</item>
+    </style>
+
+    <style name="StyleCheckBox" parent="Material.Drawable.CheckBox"/>
+    <style name="StyleRadioButton" parent="Material.Drawable.RadioButton"/>
+
+    <style name="StyleSnackBar" parent="Material.Widget.SnackBar.Mobile">
+        <item name="sb_actionText">결제</item>
+        <item name="sb_backgroundColor">#bb353535</item>
+        <item name="sb_actionTextColor">#e75656</item>
+        <item name="sb_actionTextSize">20dp</item>
+        <item name="sb_duration">0</item>
+    </style>
+
+
+</resources>
