@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/sv_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="false"
+        android:scrollbars="none"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="#f7f7f7" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ListView
+                android:id="@+id/lv_pay_menu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@layout/rounded"
+                android:listSelector="#00000000"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="위 내용을 확인하였으며 구매 진행에 동의합니다. 구매 취소를 원하실 경우 구매 매장으로 연락주시기 바랍니다. 결제 완료 후 음료제조가 시작되면 주문을 취소할 수 없습니다. 주문 후 수령하지 않은 메뉴는 주문자의 책임으로 환불 대상이 아닙니다."
+                android:layout_gravity="center"
+                android:textSize="13dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결제 수단"
+                android:autoText="true"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@layout/rounded"
+                android:layout_gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp">
+
+                <com.rey.material.widget.RadioButton
+                    style="@style/StyleRadioButton"
+                    android:id="@+id/rb_pay_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="모바일 간편 결제"
+                    android:checked="true"
+                    android:gravity="center_vertical" />
+
+                <com.rey.material.widget.RadioButton
+                    style="@style/StyleRadioButton"
+                    android:id="@+id/rb_pay_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쿠폰 결제"
+                    android:checked="false"
+                    android:gravity="center_vertical" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="구매 약관"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.rey.material.widget.CheckBox
+                    style="@style/StyleCheckBox"
+                    android:id="@+id/cb_agree_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="모두 동의"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@layout/rounded"
+                android:padding="10dp">
+
+                <com.rey.material.widget.CheckBox
+                    style="@style/StyleCheckBox"
+                    android:id="@+id/cb_agree1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="본인은 만 14세 이상입니다."
+                    android:gravity="center_vertical" />
+
+                <com.rey.material.widget.CheckBox
+                    style="@style/StyleCheckBox"
+                    android:id="@+id/cb_agree2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서비스 이용 동의"
+                    android:gravity="center_vertical" />
+
+                <com.rey.material.widget.CheckBox
+                    style="@style/StyleCheckBox"
+                    android:id="@+id/cb_agree3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="개인 정보 수집/이용 동의"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="본 결제 서비스는 HSU Multi에서 제공합니다."
+                android:paddingTop="10dp"
+                android:textSize="10dp"
+                android:textColor="#999999"
+                android:paddingBottom="10dp"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="가격"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="5dp" />
+
+            <com.rey.material.widget.Button style="@style/StyleButton"
+                android:id="@+id/btn_pay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+                android:text="결 제 하 기"
+                app:rd_delayClick="true"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

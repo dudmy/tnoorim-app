@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">T.noorim 카페를 누리다</string>
+    <string name="title_section1">주문내역</string>
+    <string name="title_section2">이벤트</string>
+    <string name="title_section3">쿠폰</string>
+    <string name="title_section4">사용자옵션</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="ip_address">?</string>
+
+    <string name="elv_area">지역별 카페찾기</string>
+    <string name="sv_pay">결제 방법</string>
+
+</resources>

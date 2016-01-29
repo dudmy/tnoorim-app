@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="noorim.tnoorim" >
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <permission android:name="noorim.tnoorim.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="allowBackup, theme, icon, label"
+        android:largeHeap="true" >
+
+        <activity android:name=".LoadingActivity"
+           android:label="@string/app_name"
+           android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name=".AreaActivity"
+           android:label="@string/elv_area">
+        </activity>
+        <activity android:name=".MenuActivity"
+            android:label="카페 메뉴" >
+        </activity>
+        <activity android:name=".PayOptionActivity"
+            android:label="@string/sv_pay">
+        </activity>
+
+        <!-- 슬라이드 메뉴 -->
+        <activity android:name="noorim.navi.OrderStateActivity"
+            android:label="@string/title_section1" >
+        </activity>
+        <activity android:name="noorim.navi.EventActivity"
+            android:label="@string/title_section2" >
+        </activity>
+        <activity android:name="noorim.navi.CouponActivity"
+            android:label="@string/title_section3" >
+        </activity>
+        <activity android:name="noorim.navi.OptionActivity"
+            android:label="@string/title_section4" >
+        </activity>
+
+        <activity android:name="noorim.gcm.PushPopUp"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+        <!-- 폰 부팅시 서비스 실행 -->
+        <receiver android:name="noorim.server.BootReceiver"
+            android:enabled="true">
+            <intent-filter>/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 서비스 등록 -->
+        <service android:name="noorim.server.BeaconService"
+            android:process=":remote"
+            android:enabled="true">
+        </service>
+
+        <!-- 푸시 -->
+        <receiver
+            android:name="noorim.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="noorim.gcm" />
+            </intent-filter>
+        </receiver>
+        <service android:name="noorim.gcm.GcmIntentService" />
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>
